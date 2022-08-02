@@ -19,13 +19,13 @@ public class PracticaS2 {
              switch (opcion){
                case 1:
            {
-                  Avanzadas ();
+                  Estadistica ();
                
            }
                    break;
                    
                case 2:
-                  System.out.println("Â¡Adios!");
+                  System.out.println("¡Adios!");
                    System.exit(opcion);
                    break;
              }
@@ -47,7 +47,7 @@ public class PracticaS2 {
                 System.out.println("Ingresa los numeros que quieres sumar, presiona la tecla = para saber el resultado");
                 String igual=null;
                 
-               // igual=teclado.nextLine ();
+               igual=teclado.nextLine ();
                 while(igual != "="){
                     igual=igual+igual;
                 igual=teclado.nextLine (); 
@@ -182,13 +182,32 @@ public class PracticaS2 {
     }
         
     }
+    
+    static void Estadistica (){
+        Random al=new Random();
+        int n;
+        int lista[]=new int[50];
+        do{
+            System.out.println("Ingrese un numero entero menor a 50");
+                n=teclado.nextInt();
+        }while(n<=50);
+        
+        for(int i=0;i<n;i++){
+            lista[i]=al.nextInt();
+        }
+            
+        for(int i=0; i<n;i++){
+            System.out.print(lista [i]+"  ");
+            
+        } 
+    }
    
     static void Matrices(){
         int op, forma;
         int m2 [][]=new int [2][2];
         int m3[][]=new int [3][3];
         
-        System.out.println("Elige el tamaÃ±o de la matriz");
+        System.out.println("Elige el tamaño de la matriz");
         System.out.println("1.  2X2");
         System.out.println("1.  3X3");
         System.out.println("----------------------------");
